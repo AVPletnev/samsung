@@ -1,0 +1,46 @@
+#tabs {
+    margin-bottom: 24px;
+}
+
+#tabs ul {
+  border-radius: 12px;
+  border: 1px solid #f87b9a;
+  width: max-content;
+  padding: 2px;
+}
+
+#tabs li {
+  display: inline-block;
+  width: 126px;
+}
+#tabs li a {
+  display: block;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+#tabs li a:hover {
+    background: #e2e2e2;
+    border-radius: 12px;
+  }
+
+
+#tabs li.active a {
+  background: #e23d66;
+  border-radius: 12px;
+  color: white;
+}
+
+#tab-contents .tab-contents {
+  display: none;
+}
+#tab-contents .tab-contents.active {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  #tabs li {
+    width: 110px;
+  }
+}

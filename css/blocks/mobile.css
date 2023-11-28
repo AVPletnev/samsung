@@ -1,0 +1,179 @@
+.mobile {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  overflow-x: scroll;
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.mobile input[type="radio"] {
+  display: none;
+}
+
+.mobile > input[type="radio"]:checked + label {
+  border: 2px solid #e13d65;
+  border-radius: 32px;
+}
+
+.mobile > input[type="radio"]:checked + label .mobile-btn {
+  display: none;
+}
+
+.mobile > input[type="radio"]:checked + label .select {
+  display: flex;
+} 
+
+.select {
+  border: none;
+  display: none;
+}
+
+.mobile-item {
+  position: relative;
+  overflow: hidden;
+  min-width: 290px;
+  
+}
+
+.mobile-btn {
+  pointer-events: none;
+}
+
+.mobile-item.active {
+  border: 2px solid #e13d65;
+  border-radius: 32px;
+}
+
+.nomobile.active {
+  border: 2px solid #e13d65;
+  border-radius: 32px;
+}
+
+.nomobile {
+  position: relative;
+  overflow: hidden;
+  min-width: 290px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: unset;
+  background: white;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.nomobile-text {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+}
+
+.nomobile .pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mobile-body {
+  background: white;
+  border-radius: 0 0 32px 32px;
+  border: #c0c2cc;
+  padding: 20px;
+  height: calc(100% - 34px);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-header {
+  border-radius: 32px 32px 0 0;
+  background: #c0c2cc;
+  display: flex;
+  justify-content: center;
+  height: 34px;
+  align-items: center;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 15px;
+}
+
+.mobile-chip {
+  border-radius: 4px;
+  padding: 4px;
+  background: linear-gradient(180deg, #f1eaff -20.54%, #fcd9ff 131.01%);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.mobile-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.mobile-options-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.mobile-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mobile-option:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-option__icon {
+  margin-right: 10px;
+}
+
+.mobile-option__text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.mobile-price {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .nomobile {
+    order: -1;
+  }
+}

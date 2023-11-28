@@ -1,0 +1,47 @@
+.upgrade-blocks {
+  display: flex;
+}
+
+.upgrade-block {
+  padding: 22px 16px;
+  border-radius: 24px;
+  border: 2px solid #c0c2cc;
+  background: #fff;
+  height: 200px;
+  max-width: 316px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.upgrade-block--title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.upgrade-block--text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.upgrade-block--text:last-child {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) { 
+  .upgrade-blocks {
+    flex-direction: column;
+  }
+
+  .upgrade-block {
+    margin-right: 0;
+    margin-bottom: 12px;
+    max-width: unset;
+  }
+
+}

@@ -1,0 +1,253 @@
+.options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.options input[type="radio"] {
+  display: none;
+}
+
+.option {
+  height: 387px;
+  position: relative;
+  cursor: pointer;
+}
+
+.options > input[type="radio"]:checked + label {
+  border: 2px solid #e13d65;
+  border-radius: 32px;
+}
+
+.option .pattern {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.option-body {
+  background: white;
+  border-radius: 0 0 30px 30px;
+  border: #c0c2cc;
+  padding: 0 12px 12px 12px;
+  height: calc(100% - 34px);
+  overflow: hidden;
+  position: relative;
+}
+
+.option-header {
+  border-radius: 30px 30px 0 0;
+  background: #c0c2cc;
+  display: flex;
+  justify-content: center;
+  height: 34px;
+  align-items: center;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.options > input[type="radio"]:checked + label .option-header {
+  color: white;
+  background: #f87b9a;
+}
+
+.option-price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.option-price .price {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: -6px;
+}
+
+.option-price .price-old {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #818699;
+  position: relative;
+  width: max-content;
+  margin-left: 12px;
+}
+
+.option-price .price-old::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: #e23d66;
+}
+
+.option-chip {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  background: #e1e1e6;
+  width: max-content;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.option-text-wrapper {
+  padding-top: 24px;
+  border-top: 1px solid #e1e1e6;
+  z-index: 1;
+  position: relative;
+}
+
+.option-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.form-checkbox__wrapper {
+  height: 30px;
+  margin: 4px 0;
+  position: relative;
+}
+
+input.form-checkbox {
+  position: absolute;
+  width: 0px;
+  margin: 0px 30px;
+  left: 0;
+}
+
+input.form-checkbox::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  top: 0;
+  left: -30px;
+  transition: 0.3s;
+  background: #c0c2cc;
+}
+
+input.form-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  top: 2px;
+  left: -28px;
+  background: #ffffff;
+  border: 1px solid #ededed;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input.form-checkbox:checked::after {
+  left: -8px;
+  background: white;
+}
+
+input.form-checkbox:checked::before {
+  background: #e23d66;
+}
+
+.option-button {
+  display: none;
+}
+
+.option-spoiler-button {
+  display: none;
+}
+
+.close-spoiler {
+  display: none;
+}
+
+.option.active .option-spoiler-button {
+  color: white;
+  background: #f87b9a;
+}
+
+@media screen and (max-width: 768px) {
+  .step-text {
+    display: block;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .option {
+    height: auto;
+  }
+
+  .option-header {
+    color: white;
+  }
+
+  .option-body {
+    padding: 0;
+  }
+
+  .option-price,
+  .option-text {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .option-chip {
+    margin-left: 12px;
+  }
+
+  .option-spoiler {
+    display: none;
+  }
+
+  .option-spoiler-button {
+    color: white;
+    background: #c0c2cc;
+    text-align: center;
+    padding: 8px 0;
+    display: block;
+  }
+
+  .option-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .option-button {
+    margin-right: 12px;
+    margin-bottom: 16px;
+    padding: 11px 16px;
+    font-size: 16px;
+    display: flex;
+    align-self: center;
+    pointer-events: none;
+  }
+
+  .close-spoiler {
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+    transform: rotate(270deg);
+    margin-bottom: 10px;
+  }
+}

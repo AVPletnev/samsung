@@ -1,0 +1,28 @@
+.store-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.store-item {
+  width: 124px;
+  margin-right: 12px;
+}
+
+.store-item:last-child {
+    margin-right: 0;
+}
+
+.payments-wrapper {
+  display: flex;
+  margin-bottom: 42px;
+}
+
+.payment-item {
+  height: 37px;
+  display: flex;
+  margin-right: 20px;
+}
+
+.payment-item:last-child {
+    margin-right: 0;
+}

@@ -1,0 +1,48 @@
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs a {
+  color: #818699;
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  display: block;
+  content: "";
+  background-image: url("../../img/bread-arrow.svg");
+  height: 8px;
+  width: 8px;
+  margin: 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    margin: 12px 0;
+  }
+
+  .breadcrumbs a {
+    font-size: 8px;
+  }
+
+  .breadcrumbs li:not(:last-child)::after {
+    margin: 0 2px;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+}

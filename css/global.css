@@ -1,0 +1,143 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #ecedf0;
+  color: #2f324d;
+  min-width: 1200px;
+}
+
+img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.section-header {
+  margin: 24px 0;
+}
+
+.section-wrapper {
+  margin-top: 60px;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+.button {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 24px 48px;
+  text-align: center;
+  border-radius: 24px;
+  background: #e23d66;
+  color: white;
+  cursor: pointer;
+}
+
+.ghost-button {
+  border: 1px solid #e23d66;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 8px;
+  color: #e23d66;
+}
+
+.title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.title-sm {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22.5px;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 24px;
+  max-width: 832px;
+}
+
+.small-text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.more-info {
+  text-decoration: underline;
+}
+
+.step-text {
+  color: #c0c2cc;
+}
+
+.step-description {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  color: #818699;
+  margin-bottom: 24px;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    min-width: 375px;
+  }
+
+  .section-wrapper {
+    margin-top: 30px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .button {
+    padding: 11px 16px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+  }
+
+  .small-text {
+    font-size: 12px;
+    max-width: 230px;
+  }
+}
